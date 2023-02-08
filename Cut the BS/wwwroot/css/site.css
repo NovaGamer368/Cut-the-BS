@@ -26,6 +26,16 @@ websiteText{
     font-family:webText;
 }
 
+.foodBanner{
+    display:flex;
+    justify-content:left;
+}
+
+.bottomBox{
+    display:flex;
+    flex-direction: row;
+}
+
 @font-face {
     font-family: webText;
     src: url('./css/DK Lemon Yellow Sun.otf');
