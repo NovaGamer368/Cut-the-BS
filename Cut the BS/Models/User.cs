@@ -13,5 +13,7 @@ namespace Cut_the_BS.Models
         public string? Name { get; set; }
         public string? UserName { get; set; }
         public string? Address { get; set; }
+        [Required]
+        public bool darkMode { get; set; }
     }
 }

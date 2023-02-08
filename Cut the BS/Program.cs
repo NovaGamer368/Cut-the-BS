@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Cut_the_BS.Data;
+using Cut_the_BS.Interfaces;
+using System;
+
 namespace Cut_the_BS
 {
     public class Program
@@ -8,6 +13,9 @@ namespace Cut_the_BS
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddTransient<IUserDataAccessLayer, UserListDAL>();
+
 
             var app = builder.Build();
 
