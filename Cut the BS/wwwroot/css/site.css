@@ -21,3 +21,12 @@ body {
 .navColor {
     background-color: #627B57;
 }
+
+websiteText{
+    font-family:webText;
+}
+
+@font-face {
+    font-family: webText;
+    src: url('./css/DK Lemon Yellow Sun.otf');
+}
