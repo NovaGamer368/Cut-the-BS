@@ -58,6 +58,10 @@ h1{
     display:flex;
     flex-direction:row;
 }
+.middleBox {
+    display: flex;
+    flex-direction: row;
+}
 
 .bottomBox{
     display:flex;
