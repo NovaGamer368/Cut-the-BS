@@ -22,9 +22,11 @@ body {
     background-color: #627B57;
 }
 
-websiteText{
-    font-family:webText;
+h1{
+    font-family: webText;
+    font-size: 200px;
 }
+
 
 .foodBanner{
     display:flex;
@@ -38,5 +40,5 @@ websiteText{
 
 @font-face {
     font-family: webText;
-    src: url('./css/DK Lemon Yellow Sun.otf');
+    src: url(/css/SweetPeas.ttf);
 }
