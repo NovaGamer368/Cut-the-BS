@@ -32,6 +32,32 @@ h1{
     display:flex;
     justify-content:left;
 }
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B3C8AA;
+    border-radius:7px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.textSize{
+    font-size:24px;
+}
+.textSize2 {
+    font-size: 40px;
+}
+
+.padding{
+    padding:20px 20px;
+    margin: 10px 10px;
+}
+
+.topBox{
+    display:flex;
+    flex-direction:row;
+}
 
 .bottomBox{
     display:flex;
