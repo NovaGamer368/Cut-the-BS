@@ -8,10 +8,20 @@
     </ul>
 
     <div class="text-center">
-        <h1 class="websiteText">Cut The BS - Recipes</h1>
+        <h1 class="websiteText">Cut The BS - API Recipes</h1>
+
+        <br />
+        <hr />
+        <br />
+
+        <form class="d-flex" asp-controller="Game" asp-action="Search" method="post">
+            <input name="key" class="form-control me-sm-2" type="search" placeholder="Search" />
+            <button id="apiSearch" class="btn btnalert-secondary my-2 my-sm-0 text-light" type="submit">Search</button>
+        </form>
 
 
         <br />
+        <hr />
         <br />
          
     </div>
