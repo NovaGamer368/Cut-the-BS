@@ -58,6 +58,7 @@ h1{
     display:flex;
     flex-direction:row;
 }
+
 .middleBox {
     display: flex;
     flex-direction: row;
@@ -71,4 +72,8 @@ h1{
 @font-face {
     font-family: webText;
     src: url(/css/SweetPeas.ttf);
+}
+
+.APIRecipeBox{
+    text-align: center;
 }
