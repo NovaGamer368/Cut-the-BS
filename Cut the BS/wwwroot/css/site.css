@@ -22,6 +22,11 @@ body {
     background-color: #627B57;
 }
 
+.navColor2 {
+    background-color: #B3C8AA;
+    border-radius:50px
+}
+
 h1{
     font-family: webText;
     font-size: 200px;
