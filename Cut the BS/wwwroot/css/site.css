@@ -22,6 +22,11 @@ body {
     background-color: #627B57;
 }
 
+.navColor2 {
+    background-color: #B3C8AA;
+    border-radius:50px
+}
+
 h1{
     font-family: webText;
     font-size: 200px;
@@ -58,6 +63,7 @@ h1{
     display:flex;
     flex-direction:row;
 }
+
 .middleBox {
     display: flex;
     flex-direction: row;
@@ -71,4 +77,28 @@ h1{
 @font-face {
     font-family: webText;
     src: url(/css/SweetPeas.ttf);
+}
+
+.APIRecipeBox{
+    text-align: center;
+}
+
+.recipeName{
+
+}
+
+.recipeImg{
+
+}
+
+.recipeIgredient{
+
+}
+
+.recipeInstruction{
+
+}
+
+#apiSearch {
+    background-color: #627B57;
 }

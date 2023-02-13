@@ -28,6 +28,11 @@ namespace Cut_the_BS.Controllers
             return View();
         }
 
+        public IActionResult API()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
