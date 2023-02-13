@@ -1,0 +1,48 @@
+﻿@model User
+
+<form asp-controller="Login" asp-action="NewUser" method="post">
+    <div class="border p-3 mt-4">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <h2>
+                New User
+                <hr />
+            </h2>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>        
+        <div class="mb-3">
+            <label asp-for="UserName"></label>
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="CheckDarkMode">
+            <label class="form-check-label" asp-for="darkMode">
+                Dark mode?
+            </label>
+        </div>
+        <button type="submit" class="btn navColor"> Create Profile </button>
+
+    </div>
+</form>
