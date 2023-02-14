@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-Cut_The_BS-F5F87CA8-B334-4CBC-B808-53489DA17973</UserSecretsId>
+    <UserSecretsId>aspnet-Cut_The_BS-710D64E1-F0A4-4437-BF93-170AA8F67BD1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
