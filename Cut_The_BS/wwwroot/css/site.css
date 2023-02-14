@@ -1,18 +1,102 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #E9F1E6;
+}
+
+.navColor {
+    background-color: #627B57;
+}
+
+.navColor2 {
+    background-color: #B3C8AA;
+    border-radius: 50px
+}
+
+h1 {
+    font-family: webText;
+    font-size: 200px;
+}
+
+
+.foodBanner {
+    display: flex;
+    justify-content: left;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B3C8AA;
+    border-radius: 7px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.textSize {
+    font-size: 24px;
+}
+
+.textSize2 {
+    font-size: 40px;
+}
+
+.padding {
+    padding: 20px 20px;
+    margin: 10px 10px;
+}
+
+.topBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.middleBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomBox {
+    display: flex;
+    flex-direction: row;
+}
+
+@font-face {
+    font-family: webText;
+    src: url(/css/SweetPeas.ttf);
+}
+
+.APIRecipeBox {
+    text-align: center;
+}
+
+.recipeName {
+}
+
+.recipeImg {
+}
+
+.recipeIgredient {
+}
+
+.recipeInstruction {
+}
+
+#apiSearch {
+    background-color: #627B57;
 }

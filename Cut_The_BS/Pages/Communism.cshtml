@@ -1,23 +1,18 @@
-﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home Page";
+﻿@{
+    ViewData["Title"] = "Community Recipe Page";
 }
 
-<body>
+<body data-spy="scroll" data-target=".nav">
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="Mission" class="nav-link px-2 link-dark">Our Mission</a></li>
+        <li><a href="About" class="nav-link px-2 link-dark">What Were About </a></li>
+        <li><a href="Offer" class="nav-link px-2 link-dark">What We Offer</a></li>
 
-    <header class="p-3 mb-3 border-bottom navColor2">
-        <div class="container">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#Mission" class="nav-link px-2 link-dark">Our Mission</a></li>
-                <li><a href="#About" class="nav-link px-2 link-dark">What Were About </a></li>
-                <li><a href="#Offer" class="nav-link px-2 link-dark">What We Offer</a></li>
-            </ul>
-        </div>
-    </header>
+
+    </ul>
 
     <div class="text-center">
-        <h1 class="websiteText">Cut The BS - Recipes</h1>
+        <h1 class="websiteText">Cut The BS - Community Recipes</h1>
 
 
         <br />
@@ -52,7 +47,7 @@
 
 
     <div>
-        <img class="foodBanner" src="./css/images/banner.png" />
+        <img class="foodBanner" src="/css/images/banner.png" />
     </div>
 
     <div class="middleBox">
@@ -74,7 +69,7 @@
     <br />
 
     <div>
-        <img class="foodBanner" src="./css/images/banner.png" />
+        <img class="foodBanner" src="/css/images/banner.png" />
     </div>
 
     <br />
@@ -93,4 +88,3 @@
         </div>
     </div>
 </body>
-
