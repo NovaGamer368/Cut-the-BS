@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Cut_the_BS.Data;
 using Cut_the_BS.Interfaces;
 using System;
+using Microsoft.AspNetCore.Identity;
 
 namespace Cut_the_BS
 {
@@ -13,9 +14,15 @@ namespace Cut_the_BS
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            builder.Services.AddTransient<IUserDataAccessLayer, UserListDAL>();
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            builder.Services.AddDbContext<Cut_the_BSContext>(options =>
+                options.UseSqlServer(connectionString));
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<Cut_the_BSContext>();
+            //builder.Services.AddTransient<IUserDataAccessLayer, UserListDAL>();
+            builder.Services.AddRazorPages();
 
             var app = builder.Build();
 
@@ -32,13 +39,16 @@ namespace Cut_the_BS
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapRazorPages();
             app.Run();
         }
+
     }
 }
