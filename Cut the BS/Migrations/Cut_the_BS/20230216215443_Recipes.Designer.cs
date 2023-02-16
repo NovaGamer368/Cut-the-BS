@@ -4,6 +4,7 @@ using Cut_the_BS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cut_the_BS.Migrations.Cut_the_BS
 {
     [DbContext(typeof(Cut_the_BSContext))]
-    partial class Cut_the_BSContextModelSnapshot : ModelSnapshot
+    [Migration("20230216215443_Recipes")]
+    partial class Recipes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
