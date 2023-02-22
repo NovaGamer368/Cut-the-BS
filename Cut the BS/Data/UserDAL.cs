@@ -3,30 +3,30 @@ using Cut_the_BS.Interfaces;
 
 namespace Cut_the_BS.Data
 {
-    public class RecipeDAL : IUserDataAccessLayer
+    public class UserDAL : IUserDataAccessLayer
     {
         private AppDbContext db;
-        public RecipeDAL(AppDbContext db)
+        public UserDAL(AppDbContext db)
         {   
             this.db = db;
         }
-        public void AddRecipe(Recipe recipe)
+        public void AddUser(User user)
         {
-            db.Recipes.Add(recipe);
+            db.Users.Add(user);
             db.SaveChanges();
         }
 
-        public void EditRecipe(Recipe recipe)
+        public void EditUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public Recipe GetRecipe(int? id)
+        public User GetUser(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Recipe> GetRecipes()
+        public IEnumerable<User> GetUsers()
         {
             throw new NotImplementedException();
         }
