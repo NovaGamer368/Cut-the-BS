@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Cut_the_BS.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,8 @@ public class Cut_the_BSContext : IdentityDbContext<IdentityUser>
         : base(options)
     {
     }
+
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

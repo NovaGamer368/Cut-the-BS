@@ -13,8 +13,7 @@ namespace Cut_the_BS.Data
 
             }
 
-            public DbSet<User> Users { get; set; }
-        }
-    
+    }
+
 
 }
