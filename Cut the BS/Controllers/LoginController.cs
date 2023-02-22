@@ -23,13 +23,13 @@ namespace Cut_the_BS.Controllers
             return View();
         }
                 [HttpPost]
-        public IActionResult NewUser(User user)
+        public IActionResult NewUser(Recipe recipe)
         { 
                        
             if (ModelState.IsValid)
             {
-                dal.AddUser(user);
-                TempData["success"] = "New user added!";
+                dal.AddRecipe(recipe);
+                TempData["success"] = "New recipe added!";
                 return RedirectToAction("Login");
             }
             return View();
@@ -41,7 +41,7 @@ namespace Cut_the_BS.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(User user)
+        public IActionResult Login(Recipe user)
         {
             return RedirectToAction("Home");
         }

@@ -4,9 +4,9 @@ namespace Cut_the_BS.Interfaces
 {
     public interface IUserDataAccessLayer
     {
-        IEnumerable<User> GetUsers();
-        void AddUser(User user);
-        User GetUser(int? id);
-        void EditUser(User user);
+        IEnumerable<Recipe> GetRecipes();
+        void AddRecipe(Recipe recipe);
+        Recipe GetRecipe(int? id);
+        void EditRecipe(Recipe recipe);
     }
 }

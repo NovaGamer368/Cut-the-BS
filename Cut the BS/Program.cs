@@ -3,6 +3,7 @@ using Cut_the_BS.Data;
 using Cut_the_BS.Interfaces;
 using System;
 using Microsoft.AspNetCore.Identity;
+using Cut_the_BS.Models;
 
 namespace Cut_the_BS
 {
@@ -10,6 +11,9 @@ namespace Cut_the_BS
     {
         public static void Main(string[] args)
         {
+            // Calls the API data
+            APIStuff.LoadData();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
