@@ -13,8 +13,10 @@ namespace Cut_the_BS.Data
 
             }
 
-            public DbSet<Recipe> Recipes { get; set; }
-        }
-    
+            public DbSet<User> Users { get; set; }
+
+
+    }
+
 
 }
