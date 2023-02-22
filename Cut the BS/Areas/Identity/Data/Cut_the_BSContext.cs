@@ -12,7 +12,7 @@ public class Cut_the_BSContext : IdentityDbContext<IdentityUser>
     {
     }
 
-    public DbSet<Recipe> Recipes { get; set; }
+    public DbSet<User> Recipes { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder builder)
