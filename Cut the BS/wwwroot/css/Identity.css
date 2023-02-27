@@ -7,3 +7,10 @@
     background-color: #627B57;
 }
 
+.nav-pills .nav-link.active {
+    background-color: #627B57;
+}
+.nav-link {
+    transition: none;
+}
+
