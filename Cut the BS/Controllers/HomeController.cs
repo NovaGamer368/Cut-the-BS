@@ -11,7 +11,7 @@ namespace Cut_the_BS.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+        string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
         //string baseURL = "https://randomuser.me/api/?results=5";
         public HomeController(ILogger<HomeController> logger)
         {
@@ -35,8 +35,8 @@ namespace Cut_the_BS.Controllers
 
         public async Task<IActionResult> API()
         {
-            //Calling API and populating it into a DataTable
-            DataTable dt = new DataTable();
+            //Calling API and populating it into a WebAPIConfig
+            WebAPIConfig dt = new WebAPIConfig();
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseURL);
@@ -48,7 +48,7 @@ namespace Cut_the_BS.Controllers
                 if (getData.IsSuccessStatusCode)
                 {
                     string result = getData.Content.ReadAsStringAsync().Result;
-                    dt = JsonConvert.DeserializeObject<DataTable>(result);
+                    dt = JsonConvert.DeserializeObject<WebAPIConfig>(result);
                 }
                 else
                 {
