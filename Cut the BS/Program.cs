@@ -21,7 +21,7 @@ namespace Cut_the_BS
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<Cut_the_BSContext>();
-            //builder.Services.AddTransient<IUserDataAccessLayer, UserListDAL>();
+            builder.Services.AddTransient<IRecipeDataAccessLayer, RecipeListDAL>();
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
@@ -49,6 +49,9 @@ namespace Cut_the_BS
             app.MapRazorPages();
             app.Run();
         }
+
+
+
 
     }
 }
