@@ -9,7 +9,7 @@ namespace Cut_the_BS.Controllers
     public class HomeController : Controller
     {
         IRecipeDataAccessLayer dal;
-
+        
         public HomeController(IRecipeDataAccessLayer indal)
         {
             dal = indal;
