@@ -14,7 +14,6 @@ namespace Cut_the_BS.Controllers
 
         string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
         //string baseURL = "https://randomuser.me/api/?results=5";
-        public HomeController(ILogger<HomeController> logger)
         public HomeController(IRecipeDataAccessLayer indal)
         {
             dal = indal;
