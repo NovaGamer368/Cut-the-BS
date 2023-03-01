@@ -54,6 +54,7 @@ namespace Cut_the_BS.Controllers
                 {
                     Console.WriteLine("API said nah fam");
                 }
+                ViewData.Model = dt;
             }
             return View();
         }

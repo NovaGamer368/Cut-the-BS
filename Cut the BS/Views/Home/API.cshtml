@@ -1,4 +1,7 @@
-﻿@{
+﻿@using System.Data;
+@model WebAPIConfig;
+
+@{
     ViewData["Title"] = "API Recipes";
 }
 
@@ -24,99 +27,67 @@
         <hr />
         <br />
          
-    </div>
+        <div>
+            @foreach (ApiRecipes ar in Model.meals)
+            {
+                <img src="@ar.strMealThumb" />
+                <p>@ar.strMeal</p>
+                <p>@ar.strCategory</p>
+                <p>@ar.strTags</p>
+                <p>@ar.strArea</p>
+                <br />
+                <br />
+                <p>@ar.strInstructions</p>
+                <br />
+                <p>@ar.strIngredient1</p>
+                <p>@ar.strIngredient2</p>
+                <p>@ar.strIngredient3</p>
+                <p>@ar.strIngredient4</p>
+                <p>@ar.strIngredient5</p>
+                <p>@ar.strIngredient6</p>
+                <p>@ar.strIngredient7</p>
+                <p>@ar.strIngredient8</p>
+                <p>@ar.strIngredient9</p>
+                <p>@ar.strIngredient10</p>
+                <p>@ar.strIngredient11</p>
+                <p>@ar.strIngredient12</p>
+                <p>@ar.strIngredient13</p>
+                <p>@ar.strIngredient14</p>
+                <p>@ar.strIngredient15</p>
+                <p>@ar.strIngredient16</p>
+                <p>@ar.strIngredient17</p>
+                <p>@ar.strIngredient18</p>
+                <p>@ar.strIngredient19</p>
+                <p>@ar.strIngredient20</p>
+                <p>@ar.strIngredient21</p>
+                <p>@ar.strIngredient22</p>
+                <p>@ar.strIngredient23</p>
+                <p>@ar.strIngredient24</p>
+                <p>@ar.strIngredient25</p>
+                <br />
+                <br />
+                <p>@ar.strMeasure1</p>
+                <p>@ar.strMeasure2</p>
+                <p>@ar.strMeasure3</p>
+                <p>@ar.strMeasure4</p>
+                <p>@ar.strMeasure5</p>
+                <p>@ar.strMeasure6</p>
+                <p>@ar.strMeasure7</p>
+                <p>@ar.strMeasure8</p>
+                <p>@ar.strMeasure9</p>
+                <p>@ar.strMeasure10</p>
+                <p>@ar.strMeasure11</p>
+                <p>@ar.strMeasure12</p>
+                <p>@ar.strMeasure13</p>
+                <p>@ar.strMeasure14</p>
+                <p>@ar.strMeasure15</p>
+                <p>@ar.strMeasure16</p>
+                <p>@ar.strMeasure17</p>
+                <p>@ar.strMeasure18</p>
+                <p>@ar.strMeasure19</p>
+                <p>@ar.strMeasure20</p>
 
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="APIRecipeBox">
-        <p id="recipeName">Test</p>
-        
-        <br/>
-        <br/>
-
-        <div id="recipeImg">
-            <img id="recipePicture" />
-        </div>
-
-        <br />
-        <br />
-        
-        <div id="recipeIgredient">
-            <p id="ingredient1">test</p>
-            <p id="ingredient2"></p>
-            <p id="ingredient3"></p>
-            <p id="ingredient4"></p>
-            <p id="ingredient5"></p>
-            <p id="ingredient6"></p>
-            <p id="ingredient7">test</p>
-            <p id="ingredient8"></p>
-            <p id="ingredient9"></p>
-            <p id="ingredient10"></p>
-            <p id="ingredient11"></p>
-            <p id="ingredient12"></p>
-            <p id="ingredient13"></p>
-            <p id="ingredient14"></p>
-            <p id="ingredient15"></p>
-            <p id="ingredient16"></p>
-            <p id="ingredient17"></p>
-            <p id="ingredient18"></p>
-            <p id="ingredient19"></p>
-            <p id="ingredient20"></p>
-        </div>
-
-        <br/>
-        <br/>
-
-        <div id="recipeInstruction">
-            <p id="instruction1">test</p>
-            <p id="instruction2"></p>
-            <p id="instruction3"></p>
-            <p id="instruction4"></p>
-            <p id="instruction5"></p>
-            <p id="instruction6"></p>
-            <p id="instruction7">test</p>
-            <p id="instruction8"></p>
-            <p id="instruction9"></p>
-            <p id="instruction10"></p>
-            <p id="instruction11"></p>
-            <p id="instruction12"></p>
-            <p id="instruction13"></p>
-            <p id="instruction14"></p>
-            <p id="instruction15"></p>
-            <p id="instruction16"></p>
-            <p id="instruction17"></p>
-            <p id="instruction18"></p>
-            <p id="instruction19"></p>
-            <p id="instruction20"></p>
-            <p id="instruction21"></p>
-            <p id="instruction22"></p>
-            <p id="instruction23"></p>
-            <p id="instruction24"></p>
-            <p id="instruction25"></p>
-        </div>
-        
-
-        <br/>
-        <br/>
-
-
-    </div>
-
-    <br />
-    <br />
-
-
-    <br />
-    <br />
-
-    <div>
-        <img class="foodBanner" src="/css/images/banner.png" />
-    </div>
-
-    <br />
-    <br />
-
+            }
+       </div>
+ 
 </body>
