@@ -7,3 +7,27 @@
     background-color: #627B57;
 }
 
+.main-theme-color-link {
+    background-color: #B3C8AA;
+    border-color: #E9F1E6;
+    color: #f8f9fa;
+}
+
+.main-theme-color-link:hover {
+    background-color: #627B57;
+    text-decoration:none;
+    color: #f8f9fa;
+}
+
+
+.nav-pills .nav-link.active {
+    background-color: #627B57;
+}
+.nav-link {
+    transition: none;
+}
+.form-check-input:checked {
+    background-color: #B3C8AA;
+    border-color: #E9F1E6;
+}
+
