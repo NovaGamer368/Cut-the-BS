@@ -1,4 +1,5 @@
 ﻿using Cut_the_BS.Models;
+using Cut_the_BS.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Data;
@@ -9,13 +10,13 @@ namespace Cut_the_BS.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        IRecipeDataAccessLayer dal;
 
         string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
         //string baseURL = "https://randomuser.me/api/?results=5";
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IRecipeDataAccessLayer indal)
         {
-            _logger = logger;
+            dal = indal;
         }
 
         public IActionResult Index()
@@ -28,6 +29,24 @@ namespace Cut_the_BS.Controllers
             return View();
         }
 
+        [HttpGet] 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost] 
+        public IActionResult Create(Recipe r)
+        {
+          
+            if (ModelState.IsValid)
+            {
+                dal.AddRecipe(r);
+                TempData["success"] = "Recipe added";
+                return RedirectToAction("Communism");
+            }
+            return View();
+        }
         public IActionResult Communism()
         {
             return View();
