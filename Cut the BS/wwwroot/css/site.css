@@ -150,3 +150,12 @@ h1{
     width: 70%;
     text-align: center;
 }
+
+#apiSearch {
+    background-color: #627B57;
+}
+
+.dark {
+    background-color: #023020;
+    color: lightgray;
+}
