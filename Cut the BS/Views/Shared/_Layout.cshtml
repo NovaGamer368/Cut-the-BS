@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/Cut_the_BS.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Identity.css" asp-append-version="true"/>
 </head>
-<body>
+<body onload="execute()">
     <header class="p-3 mb-3 border-bottom navColor">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -26,6 +26,7 @@
                     <li><a href="/Home/API" class="nav-link px-2 link-light">Our Recipes</a></li>
 
                 </ul>
+                <button class="btn main-theme-color-btn" onclick="myFunction()">Dark mode</button>
 
                 @*<div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,6 +59,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/darkMode.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

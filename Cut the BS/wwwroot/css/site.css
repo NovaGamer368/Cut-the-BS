@@ -102,3 +102,7 @@ h1{
 #apiSearch {
     background-color: #627B57;
 }
+.dark {
+    background-color: #023020;
+    color: lightgray;
+}
