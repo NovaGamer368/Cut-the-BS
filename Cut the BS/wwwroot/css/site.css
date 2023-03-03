@@ -83,22 +83,70 @@ h1{
     text-align: center;
 }
 
-.recipeName{
 
-}
 
-.recipeImg{
 
-}
-
-.recipeIgredient{
-
-}
-
-.recipeInstruction{
-
-}
 
 #apiSearch {
     background-color: #627B57;
+    text-align: center;
+}
+
+#apiSearch:hover {
+    background-color: #B3C8AA;
+}
+
+#apiLists {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 45px;
+    text-align: center;
+}
+
+#foodDisplay {
+    padding: 20px;
+    text-align: center;
+}
+
+#foodText {
+    font-weight: bold;
+    text-align: center;
+}
+
+#apiImg {
+    width: 35%;
+    height: auto;
+    text-align: center;
+}
+
+#insDisplay {
+    align-content: center;
+    background-color: #B3C8AA;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10px;
+    padding: 20px 60px 20px 60px;
+    text-align: center;
+}
+
+#information {
+    justify-content: center;
+    flex-direction: row;
+    grid-row: row;
+    text-align: center;
+}
+
+#ingDisplay {
+    align-content: center;
+    background-color: #B3C8AA;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    height: 500px;
+    justify-content: left;
+    text-align: center;
+    width: 70%;
+    text-align: center;
 }

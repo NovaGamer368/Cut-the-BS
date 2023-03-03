@@ -27,66 +27,63 @@
         <hr />
         <br />
          
-        <div>
+        <div id="apiLists">
             @foreach (ApiRecipes ar in Model.meals)
             {
-                <img src="@ar.strMealThumb" />
-                <p>@ar.strMeal</p>
-                <p>@ar.strCategory</p>
-                <p>@ar.strTags</p>
-                <p>@ar.strArea</p>
-                <br />
-                <br />
-                <p>@ar.strInstructions</p>
-                <br />
-                <p>@ar.strIngredient1</p>
-                <p>@ar.strIngredient2</p>
-                <p>@ar.strIngredient3</p>
-                <p>@ar.strIngredient4</p>
-                <p>@ar.strIngredient5</p>
-                <p>@ar.strIngredient6</p>
-                <p>@ar.strIngredient7</p>
-                <p>@ar.strIngredient8</p>
-                <p>@ar.strIngredient9</p>
-                <p>@ar.strIngredient10</p>
-                <p>@ar.strIngredient11</p>
-                <p>@ar.strIngredient12</p>
-                <p>@ar.strIngredient13</p>
-                <p>@ar.strIngredient14</p>
-                <p>@ar.strIngredient15</p>
-                <p>@ar.strIngredient16</p>
-                <p>@ar.strIngredient17</p>
-                <p>@ar.strIngredient18</p>
-                <p>@ar.strIngredient19</p>
-                <p>@ar.strIngredient20</p>
-                <p>@ar.strIngredient21</p>
-                <p>@ar.strIngredient22</p>
-                <p>@ar.strIngredient23</p>
-                <p>@ar.strIngredient24</p>
-                <p>@ar.strIngredient25</p>
-                <br />
-                <br />
-                <p>@ar.strMeasure1</p>
-                <p>@ar.strMeasure2</p>
-                <p>@ar.strMeasure3</p>
-                <p>@ar.strMeasure4</p>
-                <p>@ar.strMeasure5</p>
-                <p>@ar.strMeasure6</p>
-                <p>@ar.strMeasure7</p>
-                <p>@ar.strMeasure8</p>
-                <p>@ar.strMeasure9</p>
-                <p>@ar.strMeasure10</p>
-                <p>@ar.strMeasure11</p>
-                <p>@ar.strMeasure12</p>
-                <p>@ar.strMeasure13</p>
-                <p>@ar.strMeasure14</p>
-                <p>@ar.strMeasure15</p>
-                <p>@ar.strMeasure16</p>
-                <p>@ar.strMeasure17</p>
-                <p>@ar.strMeasure18</p>
-                <p>@ar.strMeasure19</p>
-                <p>@ar.strMeasure20</p>
+                <div id="foodDisplay">
+                <p id="foodText" class="text-decoration-underline font-weight-bold">@ar.strMeal</p>
+                <img id="apiImg" src="@ar.strMealThumb" />
+                <br/>
 
+                <p id="foodText" class="text-decoration-underline font-weight-bold">Category: </p>
+                <p>@ar.strCategory</p>
+
+                <p id="foodText" class="text-decoration-underline font-weight-bold">Food Type: </p>
+                <p>@ar.strTags</p>
+
+                <p id="foodText" class="text-decoration-underline">Region: </p>
+                <p>@ar.strArea</p>
+                </div>
+                <br />
+
+                <div>
+                    <p id="foodText">Instructions:</p>
+                    <div id="insDisplay">
+                        <p>@ar.strInstructions</p>
+                    </div>
+                </div>
+                <br />
+
+                <div id="information" class="row mx-5">
+                    <p id="foodText"> Ingredients and Measurements:</p>
+                    <div id="ingDisplay" class="mx-5 overflow-scroll">
+                        <p>@ar.strMeasure1 @ar.strIngredient1 </p>
+                        <p>@ar.strMeasure2 @ar.strIngredient2</p>
+                        <p>@ar.strMeasure3 @ar.strIngredient3</p>
+                        <p>@ar.strMeasure4 @ar.strIngredient4</p>
+                        <p>@ar.strMeasure5 @ar.strIngredient5</p>
+                        <p>@ar.strMeasure6 @ar.strIngredient6</p>
+                        <p>@ar.strMeasure7 @ar.strIngredient7</p>
+                        <p>@ar.strMeasure8 @ar.strIngredient8</p>
+                        <p>@ar.strMeasure9 @ar.strIngredient9</p>
+                        <p>@ar.strMeasure10 @ar.strIngredient10</p>
+                        <p>@ar.strMeasure11 @ar.strIngredient11</p>
+                        <p>@ar.strMeasure12 @ar.strIngredient12</p>
+                        <p>@ar.strMeasure13 @ar.strIngredient13</p>
+                        <p>@ar.strMeasure14 @ar.strIngredient14</p>
+                        <p>@ar.strMeasure15 @ar.strIngredient15</p>
+                        <p>@ar.strMeasure16 @ar.strIngredient16</p>
+                        <p>@ar.strMeasure17 @ar.strIngredient17</p>
+                        <p>@ar.strMeasure18 @ar.strIngredient18</p>
+                        <p>@ar.strMeasure19 @ar.strIngredient19</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient20</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient21</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient22</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient23</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient24</p>
+                        <p>@ar.strMeasure20 @ar.strIngredient25</p>
+                    </div>
+                </div>
             }
        </div>
  
