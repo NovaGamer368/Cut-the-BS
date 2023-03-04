@@ -99,6 +99,7 @@ h1{
 #apiLists {
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 45px;
+    justify-content: center;
     text-align: center;
 }
 
@@ -113,27 +114,35 @@ h1{
 }
 
 #apiImg {
-    width: 35%;
     height: auto;
     text-align: center;
+    width: 35%;
 }
 
 #insDisplay {
     align-content: center;
     background-color: #B3C8AA;
+    border: 2px solid #ccc;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px 10px;
-    padding: 20px 60px 20px 60px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
     text-align: center;
+    width: 95%;
+}
+
+#insText {
+    font-size: 40px;
 }
 
 #information {
-    justify-content: center;
     flex-direction: row;
     grid-row: row;
+    justify-content: center;
     text-align: center;
 }
 
@@ -148,7 +157,6 @@ h1{
     justify-content: left;
     text-align: center;
     width: 70%;
-    text-align: center;
 }
 
 #apiSearch {

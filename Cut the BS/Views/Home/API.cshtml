@@ -5,7 +5,7 @@
     ViewData["Title"] = "API Recipes";
 }
 
-<body data-spy="scroll" data-target=".nav">
+<body data-target=".nav">
     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
     </ul>
@@ -27,7 +27,7 @@
         <hr />
         <br />
          
-        <div id="apiLists">
+        <div data-spy="scroll" id="apiLists">
             @foreach (ApiRecipes ar in Model.meals)
             {
                 <div id="foodDisplay">
@@ -48,8 +48,8 @@
 
                 <div>
                     <p id="foodText">Instructions:</p>
-                    <div id="insDisplay">
-                        <p>@ar.strInstructions</p>
+                    <div id="insDisplay" class="mx-5">
+                        <p id="insText">@ar.strInstructions</p>
                     </div>
                 </div>
                 <br />
@@ -84,7 +84,12 @@
                         <p>@ar.strMeasure20 @ar.strIngredient25</p>
                     </div>
                 </div>
+                <br />
+                <br />
+                <br />
+                <hr />
             }
+
        </div>
  
 </body>
