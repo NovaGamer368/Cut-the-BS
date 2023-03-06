@@ -11,8 +11,8 @@ namespace Cut_the_BS.Controllers
     public class HomeController : Controller
     {
         IRecipeDataAccessLayer dal;
-
-        string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
+        //Arrabiata
+        string baseURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
         //string baseURL = "https://randomuser.me/api/?results=5";
         public HomeController(IRecipeDataAccessLayer indal)
         {
@@ -51,30 +51,39 @@ namespace Cut_the_BS.Controllers
         {
             return View(dal.GetRecipes());
         }
-
-        public async Task<IActionResult> API()
+        //[HttpPost]
+        public async Task<IActionResult> API(string searchKey)
         {
             //Calling API and populating it into a WebAPIConfig
-            WebAPIConfig dt = new WebAPIConfig();
-            using (var client = new HttpClient())
+
+            if (string.IsNullOrEmpty(searchKey))
             {
-                client.BaseAddress = new Uri(baseURL);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                HttpResponseMessage getData = await client.GetAsync("");
-
-                if (getData.IsSuccessStatusCode)
+                ViewData.Model = new WebAPIConfig();
+                return View();
+            } else
+            {
+                WebAPIConfig dt = new WebAPIConfig();
+                using (var client = new HttpClient())
                 {
-                    string result = getData.Content.ReadAsStringAsync().Result;
-                    dt = JsonConvert.DeserializeObject<WebAPIConfig>(result);
+                    client.BaseAddress = new Uri(baseURL + searchKey);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    HttpResponseMessage getData = await client.GetAsync("");
+
+                    if (getData.IsSuccessStatusCode)
+                    {
+                        string result = getData.Content.ReadAsStringAsync().Result;
+                        dt = JsonConvert.DeserializeObject<WebAPIConfig>(result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("API said nah fam");
+                    }
+                    ViewData.Model = dt;
                 }
-                else
-                {
-                    Console.WriteLine("API said nah fam");
-                }
-                ViewData.Model = dt;
             }
+
             return View();
         }
 
