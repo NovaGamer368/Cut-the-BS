@@ -49,7 +49,7 @@ namespace Cut_the_BS.Controllers
         }
         public IActionResult Communism()
         {
-            return View();
+            return View(dal.GetRecipes());
         }
 
         public async Task<IActionResult> API()
