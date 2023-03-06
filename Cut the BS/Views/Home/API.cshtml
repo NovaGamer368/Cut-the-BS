@@ -30,6 +30,7 @@
         <div data-spy="scroll" id="apiLists">
             @foreach (ApiRecipes ar in Model.meals)
             {
+                <br />
                 <div id="foodDisplay">
                 <p id="foodText" class="text-decoration-underline font-weight-bold">@ar.strMeal</p>
                 <img id="apiImg" src="@ar.strMealThumb" />
@@ -84,8 +85,6 @@
                         <p>@ar.strMeasure20 @ar.strIngredient25</p>
                     </div>
                 </div>
-                <br />
-                <br />
                 <br />
                 <hr />
             }
