@@ -47,6 +47,53 @@ namespace Cut_the_BS.Controllers
             }
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Search(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                return View("Communism", dal.GetRecipes());
+            }
+            return View("Communism", dal.GetRecipes().Where(x => x.Catagory.ToLower().Contains(key.ToLower())));
+        }
+
+        [HttpPost]
+        public IActionResult Filter(string ingrediants)
+        {
+            return View("Communism", dal.Filter(ingrediants));
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Recipe m)
+        {
+            dal.EditRecipe(m);
+            return RedirectToAction("Communism");
+
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            Recipe found = dal.GetRecipe(id);
+
+            if (found == null)
+                TempData["Error"] = "Recipe not found";
+
+            return View(found);
+
+        }
+
+        public IActionResult Delete(int? id)
+        {
+
+            dal.RemoveRecipe(id);
+
+            return RedirectToAction("Communism");
+
+        }
+
         public IActionResult Communism()
         {
             return View(dal.GetRecipes());

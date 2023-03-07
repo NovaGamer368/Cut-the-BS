@@ -26,6 +26,17 @@
 
     <br />
     <br />
+    <form class="d-flex" asp-controller="Home" asp-action="Search" method="post">
+        <input name="key" class="form-control me-sm-2" type="search" placeholder="search by catagory" />
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <br />
+    <form asp-controller="Home" asp-action="Filter" method="post">
+        <input name="Ingrediants" placeholder="Ingrediants" />
+       
+
+        <button type="submit" class="btn btn-success">Filter</button>
+    </form>
     <br />
     <br />
 
@@ -59,9 +70,7 @@
     <br />
     <br />
 
-    <div>
-        <img class="foodBanner" src="/css/images/banner.png" />
-    </div>
+
 
     <br />
     <br />

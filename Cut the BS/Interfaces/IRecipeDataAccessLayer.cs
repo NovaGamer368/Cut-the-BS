@@ -13,5 +13,8 @@ namespace Cut_the_BS.Interfaces
         Recipe GetRecipe(int? id);
 
         void EditRecipe(Recipe recipe);
+
+        IEnumerable<Recipe> Filter(string ingrdiants);
+
     }
 }

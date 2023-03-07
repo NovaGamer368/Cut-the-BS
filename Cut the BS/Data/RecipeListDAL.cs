@@ -41,5 +41,26 @@ namespace Cut_the_BS.Data
             db.Recipes.Remove(found);
             db.SaveChanges();
         }
+
+        public IEnumerable<Recipe> Filter(string ingrediants)
+        {
+            if (ingrediants == null)
+                ingrediants = "";
+            
+
+            if (ingrediants == "")
+                return GetRecipes();
+
+
+            IEnumerable<Recipe> List = GetRecipes().Where
+                (m => (!string.IsNullOrEmpty(m.Ingrediants) && m.Ingrediants.ToLower().Contains(ingrediants.ToLower()))).ToList();
+
+          
+
+            return List;
+
+
+
+        }
     }
 }
