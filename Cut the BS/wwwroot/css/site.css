@@ -32,6 +32,12 @@ h1{
     font-size: 200px;
 }
 
+@media screen and (max-width:1000px){
+    .imgs{
+        display:none;
+    }
+}
+
 
 .foodBanner{
     display:flex;
